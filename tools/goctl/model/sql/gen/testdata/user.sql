@@ -3,6 +3,7 @@ CREATE TABLE `test_user`
     `id`          bigint                                                 NOT NULL AUTO_INCREMENT,
     `mobile`      varchar(255) COLLATE utf8mb4_bin                       NOT NULL,
     `class`       bigint                                                 NOT NULL,
+    `classs`       decimal(16,6)                                                 NOT NULL,
     `name`        varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
     `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
     `update_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

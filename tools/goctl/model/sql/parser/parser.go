@@ -17,6 +17,7 @@ import (
 )
 
 const timeImport = "time.Time"
+const decimalImport = "decimal.Decimal"
 
 type (
 	// Table describes a mysql table
@@ -260,6 +261,14 @@ func convertColumns(columns []*parser.Column, primaryColumn string, strict bool)
 func (t *Table) ContainsTime() bool {
 	for _, item := range t.Fields {
 		if item.DataType == timeImport {
+			return true
+		}
+	}
+	return false
+}
+func (t *Table) ContainsDecimal() bool {
+	for _, item := range t.Fields {
+		if item.DataType == decimalImport {
 			return true
 		}
 	}
